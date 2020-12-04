@@ -4,7 +4,7 @@ import { AppProps } from 'next/app';
 import GlobalStyles from '../styles/globals';
 import * as locales from '../content/locale';
 
-function MyApp({ Component, pageProps }: AppProps): React.ReactElement {
+function AppComponent({ Component, pageProps }: AppProps): React.ReactElement {
   const { locale, defaultLocale, pathname } = useRouter();
   const localeIntl = locale || defaultLocale;
   const localeCopy = locales[localeIntl];
@@ -17,4 +17,4 @@ function MyApp({ Component, pageProps }: AppProps): React.ReactElement {
   );
 }
 
-export default MyApp;
+export default AppComponent;
