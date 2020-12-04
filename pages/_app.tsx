@@ -5,6 +5,8 @@ import GlobalStyles from '../styles/globals';
 import * as locales from '../content/locale';
 
 function AppComponent({ Component, pageProps }: AppProps): React.ReactElement {
+  console.log('---useRouter()----');
+  console.log(useRouter());
   const { locale, defaultLocale, pathname } = useRouter();
   const localeIntl = locale || defaultLocale;
   const localeCopy = locales[localeIntl];
