@@ -1,13 +1,6 @@
-import styled from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
+import globalStyles from '@leaffm/components/dist/utils/globalStyles';
 
-export const StyledBlue = styled.div`
-  background-color: blue;
-  color: white;
-  font-size: 35px;
-`;
-
-export const StyledGreen = styled.div`
-  background-color: green;
-  color: white;
-  font-size: 35px;
+export default createGlobalStyle`
+  ${globalStyles}
 `;
