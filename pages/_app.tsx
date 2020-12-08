@@ -1,13 +1,11 @@
 import { IntlProvider } from 'react-intl';
-import { useRouter } from 'next/router';
+import { withRouter } from 'next/router';
 import { AppProps } from 'next/app';
 import GlobalStyles from '../styles/globals';
 import * as locales from '../content/locale';
 
-function AppComponent({ Component, pageProps }: AppProps): React.ReactElement {
-  console.log('---useRouter()----');
-  console.log(useRouter());
-  const { locale, defaultLocale, pathname } = useRouter();
+function AppComponent({ Component, pageProps, router }: AppProps): React.ReactElement {
+  const { locale, defaultLocale, pathname } = router;
   const localeIntl = locale || defaultLocale;
   const localeCopy = locales[localeIntl];
   const messages = localeCopy[pathname];
@@ -19,4 +17,4 @@ function AppComponent({ Component, pageProps }: AppProps): React.ReactElement {
   );
 }
 
-export default AppComponent;
+export default withRouter(AppComponent);

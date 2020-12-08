@@ -5,22 +5,19 @@ const {
 
 module.exports = {
     i18n: {
-      // These are all the locales you want to support in
-      // your application
       locales: ["en", "es"],
-      // This is the default locale you want to be used when visiting
-      // a non-locale prefixed path e.g. `/hello`
       defaultLocale: "en",
     },
     webpack: (config, options) => {
       const { isServer } = options;
       const mfConf = {
-        name: "grow-umbrella",
-        library: { type: config.output.libraryTarget, name: "grow-umbrella" },
+        name: "growUmbrella",
+        library: { type: config.output.libraryTarget, name: "growUmbrella" },
         filename: "static/runtime/remoteEntry.js",
-        remotes: {},
+        remotes: {
+        },
         exposes: {
-          "./Header": "./components/Header",
+          "./Header": "./components/header",
         },
         shared: [],
       };
