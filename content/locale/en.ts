@@ -1,5 +1,8 @@
-export const en = {
+export default {
+  '/login': {
+    'Hello.World.Test': 'Hello World - Umbrella',
+  },
   '/': {
-    'Hello.World.Test': 'Hello World!',
+    'Hello.World.Test': 'Hello World - Umbrella',
   },
 };

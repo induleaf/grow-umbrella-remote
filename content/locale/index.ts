@@ -1,2 +1,7 @@
-export * from './en';
-export * from './es';
+import en from './en';
+import es from './es';
+
+export default {
+  en,
+  es,
+};

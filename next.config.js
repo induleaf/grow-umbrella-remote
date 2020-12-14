@@ -18,6 +18,7 @@ module.exports = {
         },
         exposes: {
           "./Header": "./components/header",
+          "./umbrellaLocale": "./content/locale",
         },
         shared: [],
       };

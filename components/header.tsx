@@ -1,7 +1,5 @@
-import { useIntl } from 'react-intl';
-
-const Header = ({ title }: any): React.ReactElement => {
-  const { formatMessage } = useIntl();
+const Header = (props: any): React.ReactElement => {
+  const { intl, title } = props;
   return (
     <div
       style={{
@@ -12,7 +10,7 @@ const Header = ({ title }: any): React.ReactElement => {
       }}
     >
       <h1>{title}</h1>
-      <h2>{formatMessage({ id: 'Hello.World.Test' })}</h2>
+      <h2>{intl.formatMessage({ id: 'Hello.World.Test' })}</h2>
     </div>
   );
 };
