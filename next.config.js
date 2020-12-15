@@ -16,8 +16,10 @@ module.exports = {
         filename: "static/runtime/remoteEntry.js",
         remotes: {
         },
+        // Components this module exposes so it can be use by a consumer
         exposes: {
           "./Header": "./components/header",
+          // Also expose the locale messages used by the components
           "./umbrellaLocale": "./content/locale",
         },
         shared: [],
