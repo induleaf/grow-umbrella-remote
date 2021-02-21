@@ -11,15 +11,16 @@ module.exports = {
     webpack: (config, options) => {
       const { isServer } = options;
       const mfConf = {
-        name: "growUmbrella",
-        library: { type: config.output.libraryTarget, name: "growUmbrella" },
+        name: "growUmbrellaRemote",
+        library: { type: config.output.libraryTarget, name: "growUmbrellaRemote" },
         filename: "static/runtime/remoteEntry.js",
         remotes: {
+
         },
         // Components this module exposes so it can be use by a consumer
         exposes: {
-          "./Header": "./components/header",
-          // Also expose the locale messages used by the components
+          "./Overview": "./components/Overview",
+          "./overviewList": "./components/models/overviewList",
           "./umbrellaLocale": "./content/locale",
         },
         shared: [],
